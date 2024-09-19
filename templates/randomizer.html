@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa Results</title>
+    <link rel="stylesheet" href={% static "css/styles2.css" %}>
+</head>
+<body>
+    <h1>Secret Santa Results</h1>
+    <div class="results">
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% else %}
+            {% for giver, receiver in pairs %}
+                <div class="pair">{{ giver.name }} gives a gift to {{ receiver.name }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <a href="{% url 'participant_list' %}">Return to Participants List</a>
+    <br>
+    <a href="{% url 'is_it_christmas' %}">Return to Home</a>
+</body>
+</html>

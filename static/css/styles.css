@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.answer {
+    font-size: 5em;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+
+a {
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}
